@@ -34,14 +34,14 @@
 &trans  &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT    &kp CARET   &kp AMPS  &kp KP_MULTIPLY  &kp LPAR  &kp RPAR     &trans
 &trans     &none   &none     &none     &none      &none    &kp MINUS  &kp EQUAL         &kp LBKT  &kp RBKT  &kp BSLH  &kp GRAVE
 &trans     &none   &none     &none     &none      &none    &kp UNDER   &kp PLUS         &kp LBRC  &kp RBRC  &kp PIPE  &kp TILDE
-                             &none     &none      &none        &none      &none            &none
+                            &trans    &trans     &trans       &trans     &trans            &none
             >;
         };
 
         media {
             bindings = <
 &trans  &none  &none  &kp C_BRI_DEC  &kp C_BRI_UP   &none    &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none  &none  &trans
-&trans  &none  &none          &none         &none   &none         &none              &none            &none  &none  &none  &trans
+&trans  &none  &none          &none         &none   &none         &none   &kp K_PLAY_PAUSE            &none  &none  &none  &trans
 &trans  &none  &none          &none         &none   &none         &none              &none            &none  &none  &none  &trans
                              &trans        &trans  &trans        &trans             &trans           &trans
             >;
