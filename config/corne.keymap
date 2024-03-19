@@ -28,6 +28,16 @@
             #binding-cells = <2>;
             tapping-term-ms = <100>;
         };
+
+        HoldForBluetooth: HoldForBluetooth {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDFORBLUETOOTH";
+            bindings = <&bt>, <&none>;
+
+            #binding-cells = <2>;
+            flavor = "tap-preferred";
+            tapping-term-ms = <2000>;
+        };
     };
 
     keymap {
@@ -68,10 +78,10 @@
 
         media {
             bindings = <
-&ext_power EP_ON  &none         &none         &kp C_BRI_DEC  &kp C_BRI_UP  &none           &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none  &none  &trans
-&bt BT_CLR        &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4    &kp K_PREVIOUS  &kp K_PLAY_PAUSE   &kp K_NEXT       &none  &none  &trans
-&trans            &none         &none         &none          &none         &none           &none           &none              &none            &none  &none  &trans
-                                              &trans         &to 0         &trans          &trans          &trans             &trans
+&ext_power EP_ON            &none         &none         &kp C_BRI_DEC  &kp C_BRI_UP  &none           &kp K_MUTE      &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &none  &none  &trans
+&HoldForBluetooth BT_CLR A  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2   &bt BT_SEL 3  &bt BT_SEL 4    &kp K_PREVIOUS  &kp K_PLAY_PAUSE   &kp K_NEXT       &none  &none  &trans
+&trans                      &none         &none         &none          &none         &none           &none           &none              &none            &none  &none  &trans
+                                                        &trans         &to 0         &trans          &trans          &trans             &trans
             >;
 
             label = "Media Control";
